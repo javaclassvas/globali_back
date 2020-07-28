@@ -23,7 +23,7 @@ export class PatientService {
     return patients;
   }
 
-  async addPatient() {
+  async testAddPatient() {
     let patient = {
       firstName: "firstName 3",
       lastName: "lastName 3",
@@ -37,7 +37,7 @@ export class PatientService {
     await db.collection(`patients`).add(patient)
   }
 
-  async testAddPatient(data) {
+  async addPatient(data) {
     console.log(data.firstName);
 
     let patient = {

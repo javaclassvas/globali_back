@@ -12,14 +12,14 @@ export class PatientController {
     return this.patientService.findAll();
   }
 
-  @Get('/patients/add')
+  @Get('/patients/test')
   addNewPatient(){
-    return this.patientService.addPatient();
+    return this.patientService.testAddPatient();
   }
 
-  @Post('/patients/test')
+  @Post('/patients/add')
   testAddPatient(@Body() data){
-    return this.patientService.testAddPatient(data)
+    return this.patientService.addPatient(data)
   }
 
 }
